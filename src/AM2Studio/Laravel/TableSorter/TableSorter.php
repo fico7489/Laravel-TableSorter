@@ -107,7 +107,7 @@ class TableSorter
                 $string .= sprintf(
                     $this->template,
                     $class,
-                    $paginator_tmp instanceof LengthAwarePaginator ? $paginator_tmp->appends([$this->sort_by_variable => $name, $this->sort_type_variable => $sort_type_this])->url($paginator_tmp->currentPage()) : '',
+                    $paginator_tmp->appends([$this->sort_by_variable => $name, $this->sort_type_variable => $sort_type_this])->url($paginator_tmp->currentPage()),
                     $title
                 );
             } else {
